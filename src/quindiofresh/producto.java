@@ -1,11 +1,13 @@
 package quindiofresh;
 
-public class CatalogoProducto {
+public class producto {
+
 	private String SKU;
 	private String  Nombre;
 	private int Precio;
-	
-	public CatalogoProducto(String sKU, String nombre, int precio) {
+
+
+	public producto(String sKU, String nombre, int precio) {
 		SKU = sKU;
 		Nombre = nombre;
 		Precio = precio;
@@ -35,6 +37,4 @@ public class CatalogoProducto {
 		Precio = precio;
 	}
 }
-
-
 }
