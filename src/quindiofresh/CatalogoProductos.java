@@ -1,33 +1,30 @@
 package quindiofresh;
 
+import java.util.ArrayList;
 
-	public class CatalogoProductos {
-	   
-	    private static CatalogoProductos instancia;
+public class CatalogoProductos {
 
-	    private final <Producto> productos=new Arraylist<>();
+	private static CatalogoProductos instancia;
 
-	    private CatalogoProductos() {}
+	private final ArrayList<producto> productos = new ArrayList<>();
 
-	    public static CatalogoProductos getInstance() {
-	        if (instancia == null) {
-	            instancia = new CatalogoProductos();
-	        }
-	        return instancia;
-	    }
+	private CatalogoProductos() {}
 
-	    public void agregarProducto(Producto producto) {
-	        productos.put(producto.getSku(), producto);
-	    }
-
-	    public Producto buscarPorSku(String sku) {
-	        return productos.get(sku);
-	    }
-
-	    public Collection<Producto> getTodos() {
-	        return productos.values();
-	    }
+	public static CatalogoProductos getInstance() {
+		if (instancia == null) {
+			instancia = new CatalogoProductos();
+		}
+		return instancia;
 	}
+
+	public void agregarProducto(producto producto) {
+		productos.add(producto);
+	}
+
+	public producto buscarPorSku(int sku) {
+		return productos.get(sku);
+	}
+}
 
 
 

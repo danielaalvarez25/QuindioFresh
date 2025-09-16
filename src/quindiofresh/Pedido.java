@@ -1,59 +1,52 @@
 package quindiofresh;
 
-import java.util.List;
+import java.util.ArrayList;
 
 public class Pedido {
-	
+
 	private String id;
 	private String fechaCreacion;
 	private Cliente cliente;
-	private List<producto> productos;
+	private ArrayList<producto> productos;
 	private String direccionEnvio;
 	private String codigoDescuento;
 	private String notasEspeciales;
-	
-	
-	private Pedido (pedidoBuilder builder) {
-	this.id=builder.id;
-	this.fechaCreacion=builder.fechaCreacion;
-	this.cliente=builder.cliente;
-	this.productos=builder.productos;
-	this.direccionEnvio=builder.direccionEnvio;
-	this.notasEspeciales=builder.notasEspeciales;
-	this.codigoDescuento=builder.codigoDescuento;
 
-	
-public String getId() {
-    return id;
-}
+	public Pedido (PedidoBuilder builder) {
+		this.id = builder.id;
+		this.fechaCreacion = builder.fechaCreacion;
+		this.cliente = builder.cliente;
+		this.productos = builder.productos;
+		this.direccionEnvio = builder.direccionEnvio;
+		this.notasEspeciales = builder.notasEspeciales;
+		this.codigoDescuento = builder.codigoDescuento;
+	}
 
-public String getFechaCreacion() {
-    return fechaCreacion;
-}
+	public String getId() {
+		return id;
+	}
 
-public Cliente getCliente() {
-    return cliente;
-}
+	public String getFechaCreacion() {
+		return fechaCreacion;
+	}
 
-public List<Producto> getProductos() {
-    return productos;
-}
+	public Cliente getCliente() {
+		return cliente;
+	}
 
-public String getDireccionEnvio() {
-    return direccionEnvio;
-}
+	public ArrayList<producto> getProductos() {
+		return productos;
+	}
 
-public String getnotasEspeciales() {
-    return notasEspeciales;
-}
+	public String getDireccionEnvio() {
+		return direccionEnvio;
+	}
 
-public String getCodigoDescuento() {
-    return codigoDescuento;
-}
-	
-	
-	
-	
-	
+	public String getnotasEspeciales() {
+		return notasEspeciales;
+	}
 
+	public String getCodigoDescuento() {
+		return codigoDescuento;
+	}
 }

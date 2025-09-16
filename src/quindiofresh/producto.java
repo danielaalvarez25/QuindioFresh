@@ -6,7 +6,6 @@ public class producto {
 	private String  Nombre;
 	private int Precio;
 
-
 	public producto(String sKU, String nombre, int precio) {
 		SKU = sKU;
 		Nombre = nombre;
@@ -36,5 +35,4 @@ public class producto {
 	public void setPrecio(int precio) {
 		Precio = precio;
 	}
-}
 }

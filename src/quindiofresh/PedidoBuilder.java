@@ -1,13 +1,15 @@
 package quindiofresh;
 
+import java.util.ArrayList;
+
 public class PedidoBuilder {
-	private String id;
-	private String fechaCreacion;
-	private Cliente cliente;
-	private <Producto> productos=new Arraylist<>();
-	private String direccionEnvio;
-	private String notasEspeciales;
-	private String codigoDescuento;
+	 String id;
+	 String fechaCreacion;
+	 Cliente cliente;
+	 ArrayList<producto> productos=new ArrayList<>();
+	 String direccionEnvio;
+	 String notasEspeciales;
+	 String codigoDescuento;
 	
 	public PedidoBuilder id (String id) {
 		this.id=id;
@@ -22,7 +24,7 @@ public class PedidoBuilder {
 		return this;
 	}
 	
-	public PedidoBuilder agregarProducto(Producto producto) {
+	public PedidoBuilder agregarProducto(producto producto) {
 		this.productos.add(producto);
 		return this;
 		
@@ -45,7 +47,6 @@ public class PedidoBuilder {
 	public Pedido build() {
 		return new Pedido(this);
 	}
-
 }
 
 	
