@@ -7,7 +7,7 @@ public class Pedido {
 	private String id;
 	private String fechaCreacion;
 	private Cliente cliente;
-	private ArrayList<producto> productos;
+	private ArrayList<Producto> productos;
 	private String direccionEnvio;
 	private String codigoDescuento;
 	private String notasEspeciales;
@@ -34,7 +34,7 @@ public class Pedido {
 		return cliente;
 	}
 
-	public ArrayList<producto> getProductos() {
+	public ArrayList<Producto> getProductos() {
 		return productos;
 	}
 

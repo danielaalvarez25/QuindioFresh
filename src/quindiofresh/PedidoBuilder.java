@@ -6,7 +6,7 @@ public class PedidoBuilder {
 	 String id;
 	 String fechaCreacion;
 	 Cliente cliente;
-	 ArrayList<producto> productos=new ArrayList<>();
+	 ArrayList<Producto> productos=new ArrayList<>();
 	 String direccionEnvio;
 	 String notasEspeciales;
 	 String codigoDescuento;
@@ -24,7 +24,7 @@ public class PedidoBuilder {
 		return this;
 	}
 	
-	public PedidoBuilder agregarProducto(producto producto) {
+	public PedidoBuilder agregarProducto(Producto producto) {
 		this.productos.add(producto);
 		return this;
 		

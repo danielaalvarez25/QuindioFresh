@@ -6,7 +6,7 @@ public class CatalogoProductos {
 
 	private static CatalogoProductos instancia;
 
-	private final ArrayList<producto> productos = new ArrayList<>();
+	private final ArrayList<Producto> productos = new ArrayList<>();
 
 	private CatalogoProductos() {}
 
@@ -17,11 +17,11 @@ public class CatalogoProductos {
 		return instancia;
 	}
 
-	public void agregarProducto(producto producto) {
+	public void agregarProducto(Producto producto) {
 		productos.add(producto);
 	}
 
-	public producto buscarPorSku(int sku) {
+	public Producto buscarPorSku(int sku) {
 		return productos.get(sku);
 	}
 }
