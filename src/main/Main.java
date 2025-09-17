@@ -12,7 +12,6 @@ import Factoy.envioEstandarFactory;
 import Factoy.envioExpressFactory;
 
 import java.util.ArrayList;
-import quindiofresh.CatalogoProductos;
 import java.util.Scanner;
 
 public class Main {
@@ -52,8 +51,16 @@ public class Main {
             linea = sc.nextLine();
         }
 
-        System.out.print("dirección: opcional");
-        String direccion = sc.nextLine();
+        
+        System.out.print("recoger en tienda? s(sí) n(no): ");
+        String recoger = sc.nextLine();
+        String direccion = "";
+        if (recoger.equalsIgnoreCase("s")) {
+            direccion = "Recoger en tienda";
+        } else {
+            System.out.print("dirección: opcional");
+            direccion = sc.nextLine();
+        }
 
         System.out.print("notas: opcional");
         String notas = sc.nextLine();
